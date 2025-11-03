@@ -260,11 +260,12 @@
   <div class="container contact-section">
     <!-- Form -->
     <div class="contact-form">
-      <form action="#" method="post">
+      <form id="contactForm" method="post">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
         <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        <div id="formStatus" style="margin-top:0.8rem;font-weight:600;"></div>
       </form>
     </div>
 
@@ -291,6 +292,35 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = 'Sending...';
+      statusEl.style.color = '#fff';
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const json = await res.json();
+        if (res.ok && json.success) {
+          statusEl.textContent = 'Message sent successfully!';
+          statusEl.style.color = '#00e676';
+          form.reset();
+        } else {
+          statusEl.textContent = json.error || 'Failed to send message.';
+          statusEl.style.color = '#ff5252';
+        }
+      } catch (err) {
+        statusEl.textContent = 'Network error. Please try again.';
+        statusEl.style.color = '#ff5252';
+      }
+    });
   </script>
 </body>
 </html>
