@@ -10,11 +10,17 @@ const rootDir = __dirname;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static assets (images, pdf, css, js) from project root
-app.use(express.static(rootDir));
+// Serve static assets
+// Explicit images mount → http://localhost:3000/images/<file>
+app.use('/images', express.static(path.join(rootDir, 'images')));
+// Project root (pdf, css, js, html, etc.)
 
 // Helper to send a specific HTML file safely
 function sendHtml(res, fileName) {
+  res.sendFile(path.join(rootDir, fileName));
+}
+
+function sendPDF(res, fileName) {
   res.sendFile(path.join(rootDir, fileName));
 }
 
@@ -27,6 +33,8 @@ app.get('/skills', (req, res) => sendHtml(res, 'skills.html'));
 app.get('/contact', (req, res) => sendHtml(res, 'contact.html'));
 app.get('/portfolio', (req, res) => sendHtml(res, 'portfolio.html'));
 app.get('/eye-care', (req, res) => sendHtml(res, 'eye-care.html'));
+
+app.get('/Arjitsinghresume.pdf', (req, res) => sendPDF(res, 'Arjitsinghresume.pdf'));
 
 // Contact form endpoint
 app.post('/api/contact', async (req, res) => {
