@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static assets
 // Explicit images mount → http://localhost:3000/images/<file>
 app.use('/images', express.static(path.join(rootDir, 'images')));
-// Project root (pdf, css, js, html, etc.)
+// Do not expose the entire project root
 
 // Helper to send a specific HTML file safely
 function sendHtml(res, fileName) {
@@ -21,6 +21,8 @@ function sendHtml(res, fileName) {
 }
 
 function sendPDF(res, fileName) {
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader('Content-Disposition', `inline; filename="${fileName}"`);
   res.sendFile(path.join(rootDir, fileName));
 }
 
@@ -34,7 +36,7 @@ app.get('/contact', (req, res) => sendHtml(res, 'contact.html'));
 app.get('/portfolio', (req, res) => sendHtml(res, 'portfolio.html'));
 app.get('/eye-care', (req, res) => sendHtml(res, 'eye-care.html'));
 
-app.get('/Arjitsinghresume.pdf', (req, res) => sendPDF(res, 'Arjitsinghresume.pdf'));
+app.get('/ArjitSinghResume.pdf', (req, res) => sendPDF(res, 'ArjitSinghResume.pdf'));
 
 // Contact form endpoint
 app.post('/api/contact', async (req, res) => {
