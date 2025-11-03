@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Arjit Singh</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;600&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9)),
+                  url('https://picsum.photos/1600/900?blur=4') no-repeat center/cover;
+      color: #fff;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #ffdd57;
+      letter-spacing: 1px;
+    }
+
+    .nav a {
+      margin-left: 1.5rem;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .nav a:hover {
+      color: #ffdd57;
+      text-shadow: 0 0 8px #ffdd57;
+    }
+
+    /* Page Title */
+    .page-title {
+      padding: 4rem 0 2rem;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      color: #ffdd57;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+      text-shadow: 0 0 15px rgba(255, 221, 87, 0.4);
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      transform: translateY(0);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project-content {
+      padding: 1.5rem;
+    }
+
+    .project-content h3 {
+      color: #ffdd57;
+      margin-bottom: 0.7rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .project-content p {
+      font-size: 0.95rem;
+      color: #e4e4e4;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn {
+      background: #ffdd57;
+      color: #333;
+      padding: 0.6rem 1.3rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #ffc107;
+      transform: translateY(-3px);
+      box-shadow: 0 0 12px rgba(255, 221, 87, 0.6);
+    }
+
+    /* Hover Effects */
+    .project-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-card:hover img {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #ddd;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .page-title {
+        font-size: 2.2rem;
+      }
+      .project-card img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Arjit Singh</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html" style="color:#ffdd57;">Projects</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <h1 class="page-title">My Projects</h1>
+
+  <!-- Projects Grid -->
+  <div class="container projects-grid">
+
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src=" C:\Users\Arijit Singh Tomar\OneDrive\Pictures\Desktop\Portfolio\images\Screenshot 2025-10-30 195052.png" alt="Portfolio Website">
+      <div class="project-content">
+        <h3>Portfolio Website</h3>
+        <p>A sleek and responsive personal portfolio website built using HTML, CSS, and JavaScript. It showcases my skills, projects, and achievements.</p>
+        <a href="portfolio.html" class="btn">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="https://picsum.photos/400/250?random=2" alt="E-commerce Store">
+      <div class="project-content">
+        <h3>E-commerce Store</h3>
+        <p>A modern online clothing store with shopping cart and checkout features. Built using HTML, CSS, JavaScript, and Bootstrap for responsive design.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="C:\Users\Arijit Singh Tomar\OneDrive\Pictures\Desktop\Portfolio\images\Screenshot 2025-09-25 203509.png" alt="Eye Care Website">
+      <div class="project-content">
+        <h3>Eye Care Website</h3>
+        <p>Developed a responsive and user-friendly website for an eye care clinic. Includes online appointment booking, service pages, and contact form.</p>
+        <a href="eye-care.html" class="btn">View Project</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © <span id="year"></span> Arjit Singh | All Rights Reserved
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

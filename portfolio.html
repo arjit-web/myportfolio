@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Project | Arjit Singh</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;600&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, rgba(106, 17, 203, 0.9), rgba(37, 117, 252, 0.9)),
+                  url('https://picsum.photos/1600/900?blur=4') no-repeat center/cover;
+      color: #fff;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding-bottom: 4rem;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #ffdd57;
+    }
+
+    .nav a {
+      margin-left: 1.5rem;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .nav a:hover, .nav a.active {
+      color: #ffdd57;
+      text-shadow: 0 0 8px #ffdd57;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      color: #ffdd57;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 15px rgba(255, 221, 87, 0.4);
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: 0 auto;
+      color: #ddd;
+      font-size: 1.05rem;
+    }
+
+    /* Section Titles */
+    h2.section-title {
+      font-size: 1.8rem;
+      color: #ffdd57;
+      margin-bottom: 1rem;
+      border-left: 5px solid #ffdd57;
+      padding-left: 12px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section p {
+      color: #ddd;
+      font-size: 1rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      list-style-type: '⭐ ';
+      color: #e4e4e4;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      background: #ffdd57;
+      color: #333;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ffc107;
+      transform: translateY(-3px);
+      box-shadow: 0 0 12px rgba(255,221,87,0.6);
+    }
+
+    /* Cinematic Screenshot Grid */
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    }
+
+    .screenshot-grid img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+      transition: all 0.4s ease;
+      border: 2px solid transparent;
+    }
+
+    .screenshot-grid img:hover {
+      transform: scale(1.08);
+      border-color: #ffdd57;
+      box-shadow: 0 0 25px rgba(255, 221, 87, 0.7);
+    }
+
+    footer {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #ddd;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Arjit Singh</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Portfolio Website Project</h1>
+    <p>
+      A complete personal portfolio built using <strong>HTML, CSS, and JavaScript</strong>.  
+      It features smooth animations, responsive design, and all key sections like Home, About, Skills, Projects, and Contact.
+    </p>
+  </section>
+
+  <div class="container">
+
+    <!-- Overview -->
+    <section>
+      <h2 class="section-title">Overview</h2>
+      <p>
+        This project showcases my complete portfolio website that highlights my skills, achievements, and work.
+        It’s designed to be simple yet elegant, allowing recruiters and visitors to easily explore my background and projects.
+      </p>
+    </section>
+
+    <!-- Technologies Used -->
+    <section>
+      <h2 class="section-title">Technologies Used</h2>
+      <ul>
+        <li>HTML5 for structured content and layout</li>
+        <li>CSS3 for styling, gradients, and responsiveness</li>
+        <li>JavaScript for dynamic interactions and smooth navigation</li>
+      </ul>
+    </section>
+
+    <!-- Features -->
+    <section>
+      <h2 class="section-title">Features</h2>
+      <ul>
+        <li>Fully responsive across all devices</li>
+        <li>Sticky navigation bar with hover effects</li>
+        <li>CV download option</li>
+        <li>Integrated LinkedIn and GitHub profile links</li>
+        <li>Subtle animations and smooth scrolling</li>
+      </ul>
+
+      <div class="btn-group">
+        <a href="index.html" class="btn">View Live Site</a>
+        <a href="https://github.com/" target="_blank" class="btn">View Code on GitHub</a>
+        <a href="Arjit_Singh_CV.pdf" download class="btn">Download CV</a>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section>
+      <h2 class="section-title">Project Screenshots</h2>
+      <div class="screenshot-grid">
+        <img src="C:\Users\Arijit Singh Tomar\OneDrive\Pictures\Desktop\Portfolio\images\Screenshot 2025-10-30 201503.png" alt="Home Page">
+        <img src="C:\Users\Arijit Singh Tomar\OneDrive\Pictures\Desktop\Portfolio\images\Screenshot 2025-10-31 185944.png" alt="About Page">
+        <img src="C:\Users\Arijit Singh Tomar\OneDrive\Pictures\Desktop\Portfolio\images\Screenshot 2025-10-31 185954.png" alt="Skills Page">
+        <img src="C:\Users\Arijit Singh Tomar\OneDrive\Pictures\Desktop\Portfolio\images\Screenshot 2025-10-31 190001.png" alt="Contact Page">
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © <span id="year"></span> Arjit Singh | All Rights Reserved
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

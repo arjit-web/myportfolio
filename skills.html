@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | Arjit Singh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Poppins:wght@400;600&display=swap');
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(135deg,rgba(106,17,203,0.9),rgba(37,117,252,0.9)),
+                 url('https://picsum.photos/1600/900?blur=3') no-repeat center/cover;
+      color:#fff;
+      line-height:1.6;
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+    .container{width:90%;max-width:1100px;margin:auto;}
+    header{
+      position:sticky;top:0;z-index:1000;
+      background:rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);
+    }
+    .header-inner{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;}
+    .logo{font-weight:700;font-size:1.5rem;color:#ffdd57;}
+    .nav a{
+      margin-left:1.5rem;font-weight:500;
+      color:#fff;text-decoration:none;transition:0.3s;
+    }
+    .nav a:hover{color:#ffdd57;}
+
+    /* Page Title */
+    .page-title{
+      padding:4rem 0;text-align:center;
+      font-family:'Montserrat',sans-serif;
+      color:#ffdd57;font-size:2.5rem;
+      text-shadow:0 0 10px rgba(255,221,87,0.6);
+    }
+
+    /* Skills Section */
+    .skills-section{margin-bottom:4rem;}
+    .section-heading{
+      text-align:left;
+      font-family:'Montserrat',sans-serif;
+      font-size:1.8rem;
+      margin:2.5rem 0 1.2rem;
+      color:#ffdd57;
+      border-left:4px solid #ffdd57;
+      padding-left:10px;
+    }
+
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:1.5rem;
+    }
+    .skill-card{
+      background:rgba(255,255,255,0.1);
+      padding:1.5rem;
+      border-radius:15px;
+      text-align:center;
+      font-weight:600;
+      transition:0.3s;
+      box-shadow:0 6px 15px rgba(0,0,0,0.3);
+      opacity:0;
+      transform:translateY(40px);
+    }
+    .skill-card.visible{
+      opacity:1;
+      transform:translateY(0);
+      transition:0.6s ease;
+    }
+    .skill-card:hover{
+      transform:translateY(-6px);
+      background:rgba(255,255,255,0.2);
+      box-shadow:0 0 20px #ffdd57;
+    }
+    .skill-card i{
+      font-size:2rem;
+      color:#ffdd57;
+      margin-bottom:0.5rem;
+    }
+    .skill-card span{
+      color:#fff;
+      font-size:1.1rem;
+      display:block;
+    }
+
+    /* Tools Section */
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .tools img {
+      width: 70px;
+      height: 70px;
+      transition: 0.4s;
+      filter: drop-shadow(0 0 8px rgba(255,221,87,0.4));
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .tools img.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.6s ease;
+    }
+    .tools img:hover {
+      transform: scale(1.15);
+      filter: drop-shadow(0 0 15px #ffdd57);
+    }
+
+    footer{
+      background:rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);
+      text-align:center;
+      padding:1.5rem;
+      font-size:0.9rem;
+      color:#ddd;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Arjit Singh</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="skills.html" style="color:#ffdd57;">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <h1 class="page-title">My Skills</h1>
+
+  <div class="container">
+
+    <!-- Frontend Development -->
+    <div class="skills-section">
+      <h2 class="section-heading">💻 Frontend Development</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+        <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+        <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript (ES6+)</span></div>
+        <div class="skill-card"><i class="fa-brands fa-react"></i><span>React.js</span></div>
+        <div class="skill-card"><i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span></div>
+        <div class="skill-card"><i class="fa-solid fa-laptop-code"></i><span>Responsive Design</span></div>
+        <div class="skill-card"><i class="fa-solid fa-pen-nib"></i><span>UI/UX Fundamentals</span></div>
+        <div class="skill-card"><i class="fa-brands fa-git-alt"></i><span>Git & GitHub</span></div>
+      </div>
+    </div>
+
+    <!-- Backend / Technical -->
+    <div class="skills-section">
+      <h2 class="section-heading">🧠 Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java (Core & OOPs)</span></div>
+        <div class="skill-card"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+        <div class="skill-card"><i class="fa-solid fa-network-wired"></i><span>Database Management</span></div>
+        <div class="skill-card"><i class="fa-solid fa-lightbulb"></i><span>Problem Solving</span></div>
+      </div>
+    </div>
+
+    <!-- HR / Soft Skills -->
+    <div class="skills-section">
+      <h2 class="section-heading">🤝 Soft Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><i class="fa-solid fa-people-group"></i><span>Teamwork</span></div>
+        <div class="skill-card"><i class="fa-solid fa-user-tie"></i><span>Leadership</span></div>
+        <div class="skill-card"><i class="fa-solid fa-comments"></i><span>Communication</span></div>
+        <div class="skill-card"><i class="fa-solid fa-clock"></i><span>Time Management</span></div>
+        <div class="skill-card"><i class="fa-solid fa-brain"></i><span>Critical Thinking</span></div>
+        <div class="skill-card"><i class="fa-solid fa-hands-helping"></i><span>Adaptability</span></div>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="skills-section">
+      <h2 class="section-heading">🌍 Languages</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><i class="fa-solid fa-language"></i><span>English (Fluent)</span></div>
+        <div class="skill-card"><i class="fa-solid fa-language"></i><span>Hindi (Native)</span></div>
+      </div>
+    </div>
+
+    <!-- Tools & Technologies -->
+    <div class="skills-section">
+      <h2 class="section-heading">🧰 Tools & Technologies</h2>
+      <div class="tools">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva">
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © <span id="year"></span> Arjit Singh | All Rights Reserved
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Intersection Observer Animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.skill-card, .tools img').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
